@@ -2,6 +2,7 @@ import { Alert, Text, TouchableOpacity, View } from 'react-native';
 import React from 'react';
 import { Camera, CameraView } from 'expo-camera'
 import { CameraType } from 'expo-camera/build/legacy/Camera.types';
+import { styles } from './styles';
 
 
 export default function App() {
@@ -18,23 +19,13 @@ export default function App() {
 
     return (
       <View
-        style={{
-          flex: 1,
-          backgroundColor: '#fff',
-          justifyContent: 'center',
-          alignItems: 'center'
-        }}
+        style={styles.view}
       >
         <TouchableOpacity
           onPress={__startCamera}
         >
           < Text
-            style={{
-              color: '#222',
-              fontWeight: 'bold',
-              textAlign: 'center'
-            }
-            }
+            style={styles.text}
           >
             Take picture
           </Text >
@@ -43,8 +34,8 @@ export default function App() {
     )
   } {
     return (<CameraView
-      style={{ flex: 1, width: "100%" }}
-    ></CameraView >)
+      style={styles.camera}
+    > x </CameraView >)
   }
 
 }
